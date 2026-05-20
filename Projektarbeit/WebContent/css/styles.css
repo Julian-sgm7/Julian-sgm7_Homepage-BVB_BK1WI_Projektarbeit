@@ -1,0 +1,798 @@
+/* Zeichensatz auf UTF-8 festlegen */
+@charset "UTF-8";
+
+/* Grundstyling f�r den gesamten Body */
+body {
+	font-family: Arial, sans-serif;	/* Schriftart festlegen */				
+	background-color: #000000;		/* Hintergrundfarbe Schwarz */				
+	color: #ffffff;					/* Textfarbe Wei� */				
+	margin: 0px;					/* Au�enabstand entfernen */				
+	padding: 4px;					/* Kleiner Innenabstand */				
+}
+
+/* Container f�r das obere Header-Element */
+.header-top {
+	display: flex;					/* Aktiviert Flexbox f�r horizontale Ausrichtung */
+	align-items: center;			/* Zentriert Elemente vertikal */
+	gap: 20px;						/* Abstand zwischen den Elementen */
+	padding: 10px 0;				/* Innenabstand oben/unten */
+}
+
+.header-top h1 {
+	margin: 0;						/* Standard-Abst�nde entfernen */
+}
+
+/* Hauptbereich Sektionen */
+main section {
+	text-align: center;				/* Text innerhalb der Sektion zentrieren */				
+}
+
+.info {
+	text-align: left;				/* Text innerhalb dieser Klasse linksb�ndig */
+}
+
+/* Raster-Layout f�r die Startseite */
+.startseite {
+	display: grid;					/* Aktiviert das CSS Grid-System */				
+	grid-template-columns: 30% auto 30%; /* Definiert drei Spalten (fest, flexibel, fest) */			
+}
+
+/* Styling der Kurs-Box */
+.kurs-box {
+	background-color: black;		/* Hintergrundfarbe der Box */				
+	border: 8px solid yellow;		/* Dicker gelber Rahmen */				
+	padding: 5px;					/* Abstand zwischen Inhalt und Rahmen */				
+	max-width: 800px;				/* Maximale Breite festlegen */			
+	margin-bottom: 25px;			/* Abstand nach unten */			
+	border-radius: 12px;			/* Abgerundete Ecken */				
+	min-height: 400px;				/* Mindesth�he der Box */				
+	width: 100%;					/* Volle verf�gbare Breite nutzen */				
+	background-image: url("../img/Sancho_Wechsel.png");	/* Pfad zum Hintergrundbild */
+	background-repeat: no-repeat;	/* Bild nicht wiederholen */				
+	background-position: bottom center;	/* Bild unten zentriert ausrichten */			
+	background-size: auto 80%;		/* Bildgr��e proportional anpassen */				
+	text-align: left; 				/* Text linksb�ndig ausrichten */							
+	box-sizing: border-box;	        /* Padding wird in die Breite eingerechnet */
+	position: relative;				/* Positionierungskontext f�r Unterelemente */
+	color: #ffffff;                 /* Explizit auf Wei� setzen */
+    font-family: Arial, sans-serif; /* Explizit auf Arial setzen */			
+}		
+
+.kurs-box h2 {
+	color: #ffffff;                 /* �berschrift in der Box auch wei� */
+	max-width: 45%;					/* �berschrift bricht fr�her um */				
+	text-align: left;				/* �berschrift linksb�ndig */				
+}
+
+/* Styling der Navigationsleiste */
+.nav-box {
+	background-color: yellow;		/* Hintergrundfarbe Gelb */				
+	padding: 0 20px;				/* Innenabstand */				
+	display: flex;					/* Flexbox f�r Anordnung der Links */			
+	align-items: center;			/* Vertikale Zentrierung der Links */			
+	gap: 10px; 						/* Abstand zwischen den Nav-Punkten */
+	height: 60px;            		/* Festgelegte H�he f�r alle Seiten */
+    box-sizing: border-box;   		/* Wichtig, damit Padding die 60px nicht vergr��ert */
+}
+
+.nav-box img {
+    height: 55px;             		/* Das Home-Icon etwas kleiner als die Box */
+    width: auto;              		/* Proportionen beibehalten */
+    display: block;
+}
+
+.nav-box a {
+	text-decoration: none;			/* Unterstreichung entfernen */				
+	color: black;					/* Schriftfarbe Schwarz */				
+	font-size: 18px;				/* Schriftgr��e festlegen */			
+	font-weight: 700;				/* Schrift auf Fett stellen */			
+}
+
+.nav-box a:last-child {
+	margin-left: auto;				/* Schiebt den letzten Link ganz nach rechts */
+}
+
+.divider {
+	color: black;					/* Farbe des Trenners */				
+	font-size: 20px;				/* Gr��e des Trenners */			
+}	
+
+/* Spiele-Anzeige */
+.BVB_Spiele {
+	display: flex;					/* Flexbox f�r Kachel-Ansicht */	
+	flex-wrap: wrap;				/* Zeilenumbruch erlauben, wenn Platz fehlt */
+	justify-content: left;			/* Am linken Rand ausrichten */					
+	gap: 30px;						/* Abstand zwischen den Kacheln */
+	margin-bottom: 50px;			/* Abstand nach unten */						
+}
+
+.BVB_Spiele a {
+	flex: 0 0 300px;				/* Kachel darf nicht wachsen/schrumpfen, Basis 300px */
+	width: 300px;					/* Breite festlegen */
+	max-width: 100%;				/* Maximal 100% der Bildschirmbreite */
+	display: block;					/* Link als Block-Element behandeln */
+}
+
+.BVB_Spiele img {
+	width: 100%;					/* Bild f�llt Container-Breite aus */			
+	height: auto;					/* H�he passt sich proportional an */
+	display: block;					/* L�cken unter Bildern verhindern */
+	border: 5px solid yellow;		/* Gelber Rahmen, 5px breit */
+    border-radius: 10px;			/* Leicht abgerundete Ecken */
+    box-sizing: border-box;			/* Padding und Rahmen werden in die Breite eingerechnet */				
+}
+
+/* Erlebnis-Bereich */
+.erlebnis-1 {
+	text-align: left;				/* Linksb�ndige Ausrichtung */
+	margin-top: 50px;				/* Abstand nach oben */
+	margin-bottom: 50px;			/* Abstand nach unten */
+}
+
+.erlebnis-1-img {
+	max-width: 400px;				/* Breite begrenzen */
+	width: 100%;					/* Breite flexibel halten */
+	height: auto;					/* H�he automatisch */
+	display: block;					/* Block-Darstellung */
+	margin: 0 auto;					/* Horizontal zentrieren */
+	border: 8px solid yellow;		/* Gelber Rahmen */
+	border-radius: 20px;			/* Stark abgerundete Ecken */
+}
+
+.erlebnis-1-img img {
+	max-width: 600px;				/* Maximale Bildbreite */
+	width: 100%;					/* Volle Breite des Containers */
+	height: auto;					/* Proportionale H�he */
+	border-radius: 15px;			/* Innere Abrundung */
+}
+
+.Mitgliederschaft {
+	max-width: 400px;				/* Maximale Breite festlegen */
+	width: 100%;					/* Breite flexibel halten */
+	height: auto;					/* Automatische H�he */
+	display: block;					/* Als Block anzeigen */
+	margin: 0 auto;					/* Zentrieren */
+	border: 8px solid yellow;		/* Gelber Rahmen */
+	border-radius: 20px;			/* Abgerundete Ecken */
+}
+
+.Mitgliederschaft img {
+	max-width: 600px;				/* Maximale Breite des Bildes */
+	width: 100%;					/* Volle Containerbreite */
+	height: auto;					/* Automatische H�he */
+	border-radius: 5px;				/* Leichte Abrundung */
+}
+
+/* Footer-Design */
+footer {
+	padding: 20px;					/* Innenabstand */				
+	background-color: #36363a;		/* Dunkelgrauer Hintergrund */				
+	margin-top: 50px;				/* Abstand zum restlichen Content */				
+}
+
+footer p {
+	text-align: center;				/* Text im Footer zentrieren */				
+	color: #ffffff;					/* Textfarbe Wei� */				
+	font-size: 17px;				/* Schriftgr��e */		
+	font-weight: bold;				/* Fettgedruckt */
+}
+
+footer a {
+	color: #ffff00; 				/* Link-Farbe Gelb */
+	text-decoration: none;			/* Keine Unterstreichung */
+}
+
+/* Shop Seite */
+.Shop-Fanartikel {
+	display: flex;					/* Flexbox f�r Produkt-Raster */
+	flex-wrap: wrap;				/* Umbruch bei Platzmangel */
+	gap: 30px;						/* Abstand zwischen Produkten */
+	justify-content: center;		/* Kacheln zentrieren */
+	margin-top: 40px;				/* Abstand nach oben */
+}
+
+.Produkt {
+	background-color: #111;			/* Fast schwarzer Hintergrund */
+	border: 6px solid yellow;		/* Gelber Rahmen */
+	border-radius: 12px;			/* Abgerundete Ecken */
+	padding: 20px;					/* Innenabstand */
+	width: 250px;					/* Feste Breite der Karte */
+	text-align: center;				/* Inhalt zentrieren */
+}
+
+.Produkt img {
+	width: 250px;					/* Breite des Produktbildes */
+	height: auto;					/* Proportionale H�he */
+	margin-bottom: 10px;			/* Abstand zum Text */
+	cursor: pointer;				/* Zeiger bei Mausber�hrung */
+	transition: transform 0.3s;		/* Weiche Animation f�r Skalierung */
+}
+
+.Produkt img:hover {
+	transform: scale(2.0);			/* Bild wird bei Hover 2.0x gr��er */
+}
+
+.Produkt h3 {
+	margin: 10px 0;					/* Abst�nde oben/unten */
+}
+
+.Produkt button {
+	background-color: yellow;		/* Buttonfarbe Gelb */
+	border: none;					/* Rahmen entfernen */
+	padding: 10px 20px;				/* Gr��e des Buttons */
+	font-weight: bold;				/* Schrift fett */
+	cursor: pointer;				/* Zeiger-Icon bei Hover */
+	border-radius: 6px;				/* Ecken abrunden */
+}
+
+.Produkt button:hover {
+	background-color: #ffd000;		/* Dunkleres Gelb beim Dr�berfahren */
+}
+
+/* Tickets Seite */
+.Tickets {
+    display: flex;					/* Flexbox f�r Ticket-Layout */
+    flex-wrap: wrap;				/* Kacheln umbrechen */
+    gap: 30px;						/* Abstand */
+    justify-content: center;		/* Zentrierte Ausrichtung */
+    margin-top: 30px;				/* Abstand nach oben */
+}
+
+.Ticket {
+    background-color: #111;			/* Dunkler Hintergrund */
+    border: 6px solid yellow;		/* Gelber Rahmen */
+    border-radius: 12px;			/* Abrundung */
+    padding: 20px;					/* Innenabstand */
+    width: 250px;					/* Breite festlegen */
+    text-align: center;				/* Text zentrieren */
+    box-sizing: border-box;			/* Padding beeinflusst Breite nicht */
+    transition: transform 0.3s;		/* Animation bei Hover */
+}
+
+.Ticket:hover {
+    transform: scale(1.05);			/* Leichtes Vergr��ern der Karte */
+}
+
+.Ticket-Bild {
+    width: 100%;					/* Volle Breite der Box */
+    height: auto;					/* Proportionale H�he */
+    border-radius: 10px;			/* Abrundung */
+    margin-bottom: 10px;			/* Abstand zum Text */
+    border: 3px solid yellow;		/* Rahmen um das Bild */
+}
+
+.Ticket h3 {
+    margin-bottom: 10px;			/* Abstand unter �berschrift */
+    color: yellow;					/* �berschrift Gelb */
+}
+
+.Ticket p {
+    margin: 5px 0;					/* Kleine Abst�nde oben/unten */
+    color: white;					/* Text Wei� */
+}
+
+.Ticket button {
+    background-color: yellow;		/* Hintergrund Gelb */
+    border: none;					/* Kein Rahmen */
+    padding: 10px 20px;				/* Innenabstand */
+    font-weight: bold;				/* Fett gedruckt */
+    cursor: pointer;				/* Klickbar-Symbol */
+    border-radius: 6px;				/* Ecken abrunden */
+    margin-top: 10px;				/* Abstand nach oben */
+    transition: background-color 0.3s; /* Farb�bergang animieren */
+}
+
+.Ticket button:hover {
+    background-color: #ffd000;		/* Dunkleres Gelb bei Hover */
+}
+
+.ticket-formular {
+    background-color: #111;			/* Dunkler Hintergrund */
+    border: 6px solid yellow;		/* Gelber Rand */
+    border-radius: 12px;			/* Ecken abrunden */
+    padding: 20px;					/* Innenabstand */
+    width: 400px;					/* Feste Breite */
+    margin: 50px auto;				/* Mittig platzieren mit margin */
+    text-align: center;				/* Text mittig */
+    color: white;					/* Schriftfarbe Wei� */
+}
+
+.ticket-formular input,
+.ticket-formular select {
+    width: 90%;						/* Breite fast �ber ganze Box */
+    padding: 8px;					/* Innenabstand der Felder */
+    margin-top: 5px;				/* Abstand nach oben */
+    background-color: #000000;		/* Felder sind schwarz */
+    color: white;					/* Eingabetext ist wei� */
+    border: 2px solid yellow;		/* Rahmen der Felder gelb */
+    box-sizing: border-box;			/* Padding rechnet Breite nicht auf */
+}
+
+.ticket-formular button {
+    background-color: yellow;		/* Gelber Button */
+    border: none;					/* Kein Rahmen */
+    padding: 10px 20px;				/* Gr��e des Buttons */
+    font-weight: bold;				/* Schrift fett */
+    cursor: pointer;				/* Mauszeiger-Wechsel */
+    border-radius: 6px;				/* Abrundung */
+    margin-top: 10px;				/* Abstand zum Feld oben */
+}
+
+.ticket-formular button:hover {
+    background-color: #ffd000;		/* Hover-Farbe */
+}
+
+.ergebnis-text {
+    background-color: #413e44;		/* Dunkelgrau */
+    padding: 15px;					/* Innenabstand */
+    border-left: 5px solid yellow;	/* Gelber Streifen links */
+    margin-top: 20px;				/* Abstand oben */
+    text-align: left;				/* Text linksb�ndig */
+}
+
+#spiel_input,
+.spiel-input {
+    background-color: #000000 !important; /* Schwarzer Hintergrund */
+    color: #ffffff !important;            /* Wei�e Schrift */
+    border: 2px solid yellow !important;  /* Gelber Rahmen */
+    width: 90%;                           /* Gleiche Breite wie die anderen */
+    padding: 8px;                         /* Gleicher Innenabstand */
+    margin-top: 5px;                      /* Gleicher Abstand nach oben */
+    box-sizing: border-box;               /* Korrekte Breitenberechnung */
+    cursor: default;                      /* Verhindert den Text-Cursor beim Dr�berfahren */
+    opacity: 1;                           /* Verhindert das Ausbleichen durch manche Browser */
+}
+
+#spiel_input::placeholder,
+.spiel-input::placeholder {
+    color: #aaaaaa;
+}
+
+.ergebnis-detail {
+    margin-top: 20px;
+    border-top: 1px solid #ccc;
+    padding-top: 10px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* Mannschaften */
+.titel-mannschaften {
+    text-align: center;				/* Text mittig */
+    color: yellow;					/* Farbe Gelb */
+    font-size: 36px;				/* Gro�e Schrift */
+    margin-top: 40px;				/* Abstand oben */
+    text-transform: uppercase;		/* In Gro�buchstaben umwandeln */
+}
+
+.mannschafts-grid {
+    display: grid;					/* Grid-Layout aktivieren */
+    grid-template-columns: 1fr;		/* Eine Spalte, die alles einnimmt */
+    gap: 30px;						/* Abstand der Elemente */
+    max-width: 1200px;				/* Maximale Gesamtbreite */
+    margin: 50px auto;				/* Mittig ausrichten */
+    padding: 0 20px;				/* Seitlicher Innenabstand */
+}
+
+.team-box {
+    background-color: #1a1a1a;		/* Hintergrund Anthrazit */
+    border: 4px solid yellow;		/* Gelber Rahmen */
+    display: flex;					/* Bild und Text nebeneinander */
+    align-items: center;			/* Vertikal zentrieren */
+    overflow: hidden;				/* �berstehendes (beim Zoom) abschneiden */
+}
+
+.bild-container {
+    flex: 1;						/* Nimmt den halben Platz ein */
+    overflow: hidden;				/* Wichtig f�r Bild-Zoom Effekt */
+}
+
+.bild-container img {
+    width: 100%;					/* Volle Breite des Containers */
+    height: auto;					/* Automatische H�he */
+    display: block;					/* Block-Darstellung */
+    transition: transform 0.4s ease-in-out; /* Weicher Zoom-Effekt */
+}
+
+.team-box:hover .bild-container img {
+    transform: scale(1.1);			/* Bild wird bei Hover vergr��ert */
+}
+
+.text-inhalt {
+    flex: 1.2;						/* Textbereich ist etwas breiter als Bild */
+    padding: 30px;					/* Innenabstand f�r Text */
+}
+
+.text-inhalt h3 {
+    margin: 0 0 10px 0;				/* Abst�nde definieren */
+    color: yellow;					/* �berschrift Gelb */
+    font-size: 24px;				/* Schriftgr��e */
+}
+
+.text-inhalt p {
+    font-size: 16px;				/* Textgr��e */
+    color: white;					/* Farbe Wei� */
+    line-height: 1.5;				/* Zeilenabstand f�r Lesbarkeit */
+}
+
+.button {
+    display: inline-block;			/* Link wie einen Button behandeln */
+    margin-top: 15px;				/* Abstand oben */
+    font-size: 14px;				/* Schriftgr��e */
+    font-weight: bold;				/* Schrift fett */
+    color: yellow;					/* Farbe Gelb */
+    text-transform: uppercase;		/* Alles gro� schreiben */
+}
+
+.mannschafts-grid2 {
+    display: grid;					/* Neues Grid-Layout */
+    grid-template-columns: 1fr 1fr;	/* Zwei gleich breite Spalten */
+    gap: 30px;						/* Abstand zwischen Kacheln */
+    max-width: 1200px;				/* Maximale Breite */
+    margin: 50px auto;				/* Horizontal zentrieren */
+    padding: 0 20px;				/* Seitenabstand */
+}
+
+.team-box {
+    background-color: #1a1a1a;		/* Hintergrundfarbe */
+    border: 4px solid yellow;		/* Gelber Rahmen */
+    display: flex;					/* Flexbox f�r Inhalt */
+    align-items: stretch;			/* Inhalt streckt sich auf volle H�he */
+    overflow: hidden;				/* Abschneiden bei �berlauf */
+}
+
+.text-inhalt {
+    flex: 1;						/* Nimmt verf�gbaren Platz ein */
+    padding: 30px;					/* Abstand zum Rand */
+    color: white;					/* Textfarbe Wei� */
+}
+
+.text-inhalt h3 {
+    margin: 0 0 15px 0;				/* Abstand unten */
+    color: yellow;					/* Gelbe �berschrift */
+    font-size: 24px;				/* Schriftgr��e */
+    text-transform: uppercase;		/* Alles in Gro�buchstaben */
+}
+
+/* Service Seite */
+.service-form {
+    display: flex;					/* Vertikale Ausrichtung der Felder */
+    flex-direction: column;			/* Elemente untereinander anordnen */
+    gap: 12px;						/* Abstand zwischen Feldern */
+}
+
+.service-form input, 
+.service-form select,
+.service-form textarea {
+    width: 100%;					/* Volle Breite des Formulars */
+    padding: 10px;					/* Innenabstand */
+    background-color: #222;			/* Dunkler Hintergrund der Felder */
+    color: white;					/* Text in den Feldern wei� */
+    border: 2px solid yellow;		/* Gelber Rahmen */
+    border-radius: 4px;				/* Leicht abgerundet */
+    box-sizing: border-box; 		/* Padding z�hlt nicht zur Breite */
+    font-family: Arial, sans-serif;	/* Schriftart */
+    font-size: 14px;				/* Schriftgr��e */
+}
+
+.service-form textarea {
+    resize: none;					/* Verhindert Gr��en�nderung durch Nutzer */
+}
+
+.submit-button {
+    background-color: yellow;		/* Hintergrundfarbe Gelb */
+    color: black;					/* Textfarbe Schwarz */
+    border: none;					/* Kein Rahmen */
+    padding: 12px;					/* Gr��e des Buttons */
+    font-weight: bold;				/* Fett gedruckt */
+    cursor: pointer;				/* Mauszeiger-Effekt */
+    text-transform: uppercase;		/* Gro�buchstaben */
+    transition: background-color 0.3s, transform 0.2s; /* Effekte animieren */
+    border-radius: 6px;				/* Abrundung */
+    width: 100%;					/* Volle Breite */
+}
+
+.submit-button:hover {
+    background-color: #ffd000;		/* Dunkleres Gelb bei Hover */
+    transform: scale(1.02);			/* Minimales Vergr��ern */
+}
+
+.erlebnis {
+    text-align: center;				/* Text zentriert */
+    margin-top: 50px;				/* Abstand oben */
+    margin-bottom: 50px;			/* Abstand unten */
+    border: none;					/* Kein Rahmen */
+}
+
+.erlebnis-img {
+    max-width: 600px; 				/* Maximale Breite */
+    margin: 0 auto;					/* Zentrieren */
+    border: none;					/* Kein Rahmen */
+    border-radius: 0;				/* Keine Eckenabrundung */
+    padding: 0;						/* Kein Innenabstand */
+    background: none;				/* Kein Hintergrund */
+}
+
+.erlebnis-img img {
+    width: 100%;					/* Volle Breite */
+    height: auto;					/* H�he passt sich an */
+    border: none;					/* Kein Bildrand */
+    border-radius: 0;				/* Keine Abrundung */
+    display: block;					/* Als Block anzeigen */
+}
+
+/* Impressum */
+.impressum-seite {
+    background: linear-gradient(180deg, #020202 0%, #121212 100%);
+    color: #f2f2f2;
+}
+
+.impressum-seite .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 24px 60px;
+}
+
+.impressum-hero {
+    display: grid;
+    grid-template-columns: 1.8fr 1fr;
+    gap: 28px;
+    align-items: start;
+    margin-bottom: 36px;
+}
+
+.impressum-hero .eyebrow {
+    display: inline-block;
+    margin-bottom: 12px;
+    color: #ffdd57;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    font-size: 0.78rem;
+}
+
+.impressum-hero h1 {
+    color: #ffffff;
+    font-size: clamp(2.4rem, 3vw, 3.6rem);
+    margin: 0 0 18px;
+    line-height: 1.05;
+}
+
+.impressum-hero p {
+    max-width: 760px;
+    color: #d9d9d9;
+    line-height: 1.8;
+    font-size: 1rem;
+}
+
+.hero-card {
+    background: rgba(255, 205, 0, 0.08);
+    border: 1px solid rgba(255, 205, 0, 0.22);
+    border-radius: 22px;
+    padding: 26px 28px;
+    box-shadow: 0 24px 50px rgba(0, 0, 0, 0.3);
+}
+
+.hero-card h2,
+.impressum-card h2,
+.legal-card h3 {
+    color: #ffdd57;
+    margin-top: 0;
+}
+
+.hero-card p,
+.impressum-card p,
+.legal-card p {
+    color: #e6e6e6;
+    line-height: 1.75;
+    margin: 0.8rem 0 0;
+}
+
+.impressum-grid,
+.legal-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 24px;
+    margin-bottom: 28px;
+}
+
+.impressum-card,
+.legal-card {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
+    padding: 26px 28px;
+    box-shadow: inset 0 0 0 1px rgba(255, 205, 0, 0.03);
+}
+
+.impressum-card h2 {
+    margin-bottom: 16px;
+}
+
+.legal-card {
+    min-height: 220px;
+}
+
+.impressum-card a,
+.legal-card a {
+    color: #ffea7f;
+    text-decoration: none;
+}
+
+.impressum-card a:hover,
+.legal-card a:hover {
+    text-decoration: underline;
+}
+
+.impressum-note {
+    color: #b8b8b8;
+    font-size: 0.95rem;
+    margin-top: 20px;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    margin: 36px 0;
+}
+
+@media screen and (max-width: 960px) {
+    .impressum-hero {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width: 680px) {
+    .impressum-seite .container {
+        padding: 28px 16px 40px;
+    }
+
+    .impressum-hero h1 {
+        font-size: 2.4rem;
+    }
+}
+
+.flex-wrapper {
+    display: flex;         			/* Aktiviert das flexible Layout */
+    flex-direction: column; 		/* Richtet die Boxen vertikal untereinander aus */
+    gap: 20px;            			/* Erzeugt einen gleichm��igen Abstand zwischen den Boxen */
+    align-items: flex-start; 		/* Stellt sicher, dass die Boxen linksb�ndig bleiben */
+}
+
+.abschnitt {
+    width: 100%;            		/* Stellt sicher, dass die Boxen die volle Breite nutzen */
+    background: #111;     			/* Optional: Ein ganz dunkles Grau, um die Boxen abzuheben */
+    padding: 20px;
+    border-left: 3px solid #ffcd00; /* Ein gelber Akzentstrich links an jeder Box */
+}
+
+.abschnitt h3 {
+    color: #ffcd00;
+    margin-top: 0;        			/* Entfernt den Standard-Abstand oben */
+    margin-bottom: 15px;
+}
+
+/* Media Query: Greift nur, wenn die Bildschirmbreite maximal 768 Pixel betr�gt */
+@media screen and (max-width: 768px) {
+    
+    /* --- Header & Navigation --- */
+    .header-top {
+        flex-direction: column;    	/* Stapelt Logo und Text vertikal */
+        text-align: center;        	/* Zentriert den Text im Header */
+    }
+
+    .nav-box {
+        flex-wrap: wrap;           	/* Erlaubt Men�punkten den Zeilenumbruch */
+        height: auto;              	/* Hebt die feste H�he von 60px auf */
+        justify-content: center;   	/* Zentriert die Links horizontal */
+        padding: 10px;             	/* Gibt dem umbrochenen Men� mehr Luft */
+    }
+
+    .nav-box a:last-child {
+        margin-left: 0;            	/* Entfernt das "Nach-rechts-schieben" des Home-Icons */
+        width: 100%;               	/* Home-Icon bekommt eine eigene Zeile */
+        text-align: center;        	/* Zentriert das Icon in seiner Zeile */
+    }
+
+    /* --- Inhaltsbereiche --- */
+    .startseite {
+        display: block;            	/* Deaktiviert das 3-Spalten-Grid f�r einfachen Fluss */
+    }
+
+    .kurs-box {
+        max-width: 95%;            	/* Nutzt fast die volle Breite des Handys */
+        margin: 0 auto 25px auto;  	/* Zentriert die Box mit Au�enabstand nach unten */
+        background-size: cover;    	/* Bild f�llt die Box trotz Format�nderung voll aus */
+        min-height: 300px;         	/* Reduziert die Mindesth�he f�r kleine Bildschirme */
+    }
+
+    .BVB_Spiele, .Shop-Fanartikel, .Tickets {
+        justify-content: center;   	/* Zentriert Kacheln, falls Platz �brig ist */
+    }
+
+    .Produkt, .Ticket, .BVB_Spiele a {
+        width: 100%;               	/* Kacheln dehnen sich auf verf�gbare Breite aus */
+        max-width: 320px;          	/* Verhindert, dass Kacheln zu breit/unf�rmig werden */
+    }
+
+    /* --- Formulare & Layout --- */
+    .mannschafts-grid, .mannschafts-grid2 {
+        grid-template-columns: 1fr; 	/* Erzwingt eine einzige Spalte */
+        margin: 20px auto;          	/* Verringert den �u�eren Abstand */
+    }
+
+    .team-box {
+        flex-direction: column;    		/* Bild oben, Text unten statt nebeneinander */
+    }
+
+    .ticket-formular, .service-form {
+        width: 100%;               		/* Nutzt die volle Breite des Containers */
+        box-sizing: border-box;    		/* Padding wird nicht zur Breite addiert */
+    }
+
+    .impressum-seite .container {
+        padding: 10px;             		/* Weniger Platzverschwendung an den R�ndern */
+    }
+}
+
+/* --- Galerie / Lightbox --- */
+.gallery-grid {
+    margin: 24px 0 40px 0;
+}
+.gallery-grid figure {
+    background: #0b0b0b;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.5);
+}
+.gallery-grid img {
+    display: block;
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    transition: transform .25s ease;
+    cursor: pointer;
+}
+.gallery-grid img:hover { transform: scale(1.03); }
+.gallery-grid figcaption {
+    padding: 10px;
+    font-size: 0.95rem;
+    color: #ddd;
+    background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.12) 100%);
+}
+
+.lightbox {
+    position: fixed;
+    inset: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0,0,0,0.85);
+    z-index: 9999;
+    padding: 20px;
+}
+.lightbox.open { display: flex; }
+.lightbox img {
+    max-width: 95%;
+    max-height: 85%;
+    border-radius: 6px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.6);
+}
+.lightbox .caption {
+    margin-top: 12px;
+    color: #eee;
+    text-align: center;
+}
+.lightbox .close {
+    position: absolute;
+    top: 18px;
+    right: 22px;
+    color: #fff;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 480px) {
+    .gallery-grid img { height: 140px; }
+}
