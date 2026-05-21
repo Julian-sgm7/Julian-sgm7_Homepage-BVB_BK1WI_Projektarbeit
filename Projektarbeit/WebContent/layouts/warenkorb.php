@@ -50,9 +50,8 @@ foreach ($cart as $item) {
 <main class="cart-page">
     <div class="cart-header">
         <div>
-            <span class="eyebrow">Warenkorb</span>
-            <h1>Deine Bestellung</h1>
-            <p>Überprüfe deine Artikel, passe die Menge an oder gib deine Daten ein, um zur Kasse zu gehen.</p>
+            <h1>Warenkorb</h1>
+            <h3>Deine Bestellung</h3>
         </div>
         <a href="shop.php" class="button button-secondary">Weiter einkaufen</a>
     </div>

@@ -17,7 +17,7 @@
 				<span class="divider">|</span>
 				<a href="mannschaften.php">Mannschaften</a>
 				<span class="divider">|</span>
-				<a href="cart.php">Warenkorb</a>
+				<a href="warenkorb.php">Warenkorb</a>
 				<span class="divider">|</span>
 				<a href="service.php">Service</a>
 				<a href="../index.php">

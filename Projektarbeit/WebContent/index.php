@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="de">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,8 +10,10 @@
 <body>
 	<header>
 		<div class="header-top">
-		<img class="logo" src="img/BVB_Logo.png" alt="Logo" width="85" height="73">
-		<h1>BVB-Homepage</h1>
+			<img class="logo" src="img/BVB_Logo.png" alt="Logo" width="85" height="73">
+			<div>
+				<h1>BVB-Homepage</h1>
+			</div>
 		</div>
 		<nav>
 			<div class="nav-box">
@@ -26,46 +28,61 @@
 			</div>
 		</nav>
 	</header>
-	<main>
-		<div class="info">
-		<h2>Info</h2>
-			<p>Der Ballspielverein Borussia 09 e. V. Dortmund ist ein Sportverein aus Dortmund, der am 19. Dezember 1909 gegründet wurde. Borussia ist der neulateinische Name für Preußen. Seine Fußballsparte nimmt als Hauptsportart die hervorragende Stellung innerhalb des Vereins ein.</p>
-		</div>
-	<div class="startseite">
-		<section></section>
-		<section class="kurs-box">
-			<h2>News</h2>
-				<p>Jadon Sancho wechselt offiziell zum BVB</p>		
-		</section>
-		<section></section>
-	</div>
-		<h2>N&auml;chste BVB Spiele</h2>
-			<div class="BVB_Spiele">
-				<a href="layouts/tickets.php"><img src="img/BVB_Bayern.png" alt="BVB_Bayern"></a>
-				<a href="layouts/tickets.php"><img src="img/BVB_Atletiko.png" alt="BVB_Atletiko"></a>
-				<a href="layouts/tickets.php"><img src="img/BVB_Real.png" alt="BVB_Real"></a>
-				<a href="layouts/tickets.php"><img src="img/St.Pauli_BVB.png" alt="BVB Pauli"></a>
+
+	<main class="homepage">
+		<section class="hero">
+			<div class="hero-copy">
+				<span class="eyebrow">Willkommen beim BVB</span>
+				<h2>Der Ballspielverein Borussia 09 e. V. Dortmund</h2>
+				<p>Der Ballspielverein Borussia 09 e. V. Dortmund ist ein Sportverein aus Dortmund, der am 19. Dezember 1909 gegründet wurde. Borussia ist der neulateinische Name für Preußen. Seine Fußballsparte nimmt als Hauptsportart die hervorragende Stellung innerhalb des Vereins ein.</p>
+				<div class="hero-actions">
+					<a href="layouts/shop.php" class="button button-primary">Zum Shop</a>
+					<a href="layouts/tickets.php" class="button button-secondary">Tickets sichern</a>
+				</div>
 			</div>
-	<section class="erlebnis-1">
-    <h2>Erlebnis</h2>
-	    <div class="erlebnis-1-img">
-	        <a href="https://www.bvb.de/de/de/service/erlebnis-bvb.html" target="_blank" rel="noopener">
-	            <img src="img/Erlebnis.png" alt="Ansicht des Signal Iduna Parks bei einem BVB Erlebnis-Event" loading="lazy">
-	        </a>    
-	    </div>
-	</section>
-	<section class="Mitgliederschaft">	
-		<a href="https://www.bvb.de/de/de/der-bvb/der-verein/mitgliedschaft.html">
-			<img src="img/Mitglied.png" alt="Mitgliederschaft"></a>
-	</section>
+			<div class="hero-panel">
+				<div class="home-card">
+					<h3>News</h3>
+					<p>Jadon Sancho wechselt offiziell zum BVB.</p>
+					<img class="news-image" src="img/Sancho_Wechsel.png" alt="Jadon Sancho Wechsel zum BVB" loading="lazy">
+				</div>
+			</div>
+		</section>
+
+		<section class="home-cards">
+			<article class="home-card">
+				<h3>Erlebnis</h3>
+				<div class="erlebnis-1-img">
+					<a href="https://www.bvb.de/de/de/service/erlebnis-bvb.html" target="_blank" rel="noopener">
+						<img src="img/Erlebnis.png" alt="Ansicht des Signal Iduna Parks bei einem BVB Erlebnis-Event" loading="lazy">
+					</a>
+				</div>
+			</article>
+
+			<article class="home-card">
+				<h3>Nächste BVB Spiele</h3>
+				<div class="BVB_Spiele home-games">
+					<a href="layouts/tickets.php"><img src="img/BVB_Bayern.png" alt="BVB Bayern"></a>
+					<a href="layouts/tickets.php"><img src="img/BVB_Atletiko.png" alt="BVB Atletico"></a>
+					<a href="layouts/tickets.php"><img src="img/BVB_Real.png" alt="BVB Real"></a>
+					<a href="layouts/tickets.php"><img src="img/St.Pauli_BVB.png" alt="BVB Pauli"></a>
+				</div>
+			</article>
+
+			<article class="home-card home-membership">
+				<h3>Mitgliederschaft</h3>
+				<a href="https://www.bvb.de/de/de/der-bvb/der-verein/mitgliedschaft.html" target="_blank" rel="noopener">
+					<img src="img/Mitglied.png" alt="Mitgliederschaft">
+				</a>
+			</article>
+		</section>
 	</main>
 
 	<footer>
-	    <p>Service: <a href="service.php">service@bvb.de</a></p>
-	    <p>Allgemeine Anfragen: <a href="service.php">info@bvb.de</a></p>
-	    <p>Adresse: Rheinlanddamm 207-209, 44137 Dortmund</p>
-	    <p class="footer-links"><a href="layouts/impressum.php">Impressum</a> | <a href="layouts/gallery.php">Galerie</a></p>
+		<p>Service: <a href="layouts/service.php">service@bvb.de</a></p>
+		<p>Allgemeine Anfragen: <a href="layouts/service.php">info@bvb.de</a></p>
+		<p>Adresse: Rheinlanddamm 207-209, 44137 Dortmund</p>
+		<p class="footer-links"><a href="layouts/impressum.php">Impressum</a> | <a href="layouts/gallery.php">Galerie</a></p>
 	</footer>
-	
 </body>
 </html>
