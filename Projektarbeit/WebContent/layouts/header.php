@@ -20,6 +20,14 @@
 				<a href="warenkorb.php">Warenkorb</a>
 				<span class="divider">|</span>
 				<a href="service.php">Service</a>
+				<div class="search-container">
+					<div class="search-wrapper">
+						<input type="text" class="search-input" placeholder="Suchen..." autocomplete="off">
+						<span class="search-icon">🔍</span>
+						<button class="search-clear" title="Löschen">✕</button>
+						<div class="search-results"></div>
+					</div>
+				</div>
 				<a href="../index.php">
 				<img src="../img/Home_Zeichen.png" alt="Home" width="70" height="50">
 				</a>

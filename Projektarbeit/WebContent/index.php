@@ -11,9 +11,7 @@
 	<header>
 		<div class="header-top">
 			<img class="logo" src="img/BVB_Logo.png" alt="Logo" width="85" height="73">
-			<div>
-				<h1>BVB-Homepage</h1>
-			</div>
+			<h1>BVB-Homepage</h1>
 		</div>
 		<nav>
 			<div class="nav-box">
@@ -24,6 +22,14 @@
 				<a href="layouts/mannschaften.php">Mannschaften</a>
 				<span class="divider">|</span>
 				<a href="layouts/service.php">Service</a>
+				<div class="search-container">
+					<div class="search-wrapper">
+						<input type="text" class="search-input" placeholder="Suchen..." autocomplete="off">
+						<span class="search-icon">🔍</span>
+						<button class="search-clear" title="Löschen">✕</button>
+						<div class="search-results"></div>
+					</div>
+				</div>
 				<a href="index.php"><img src="img/Home_Zeichen.png" alt="Home" width="70" height="50"></a>
 			</div>
 		</nav>
@@ -36,6 +42,7 @@
 				<h2>Der Ballspielverein Borussia 09 e. V. Dortmund</h2>
 				<p>Der Ballspielverein Borussia 09 e. V. Dortmund ist ein Sportverein aus Dortmund, der am 19. Dezember 1909 gegründet wurde. Borussia ist der neulateinische Name für Preußen. Seine Fußballsparte nimmt als Hauptsportart die hervorragende Stellung innerhalb des Vereins ein.</p>
 				<div class="hero-actions">
+					
 					<a href="layouts/shop.php" class="button button-primary">Zum Shop</a>
 					<a href="layouts/tickets.php" class="button button-secondary">Tickets sichern</a>
 				</div>
@@ -49,7 +56,7 @@
 			</div>
 		</section>
 
-		<section class="home-cards">
+		<section class="home-cards home-cards-simple">
 			<article class="home-card">
 				<h3>Erlebnis</h3>
 				<div class="erlebnis-1-img">
@@ -84,5 +91,7 @@
 		<p>Adresse: Rheinlanddamm 207-209, 44137 Dortmund</p>
 		<p class="footer-links"><a href="layouts/impressum.php">Impressum</a> | <a href="layouts/gallery.php">Galerie</a></p>
 	</footer>
+
+	<script src="js/search.js"></script>
 </body>
 </html>

@@ -27,6 +27,7 @@ include 'header.php';
                     $url = '/img/' . rawurlencode($file);
                     $caption = htmlspecialchars(pathinfo($file, PATHINFO_FILENAME));
                     echo '<figure class="gallery-item">';
+                    /* mit onclick kann man das bild vergrösern */
                     echo '<img src="' . $url . '" alt="' . $caption . '" loading="lazy" data-full="' . $url . '" onclick="openLightbox(this)">';
                     echo '<figcaption>' . $caption . '</figcaption>';
                     echo '</figure>';

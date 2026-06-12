@@ -4,15 +4,20 @@ $titel = "Warenkorb";
 include 'head.php';
 include 'header.php';
 
+/* Holt die Artikel und Kundendaten aus der Session (falls vorhanden) */
 $cart = $_SESSION['cart'] ?? [];
 $customer = $_SESSION['cart_customer'] ?? ['name' => '', 'email' => '', 'address' => ''];
+/* Standardwerte für Nachrichten und Bestellstatus setzen */
 $message = '';
 $orderComplete = false;
 
+/* Wenn Formulardaten abgeschickt wurden (POST-Anfrage) */
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    /* Aktion: Ein Produkt aus dem Warenkorb löschen */
     if (isset($_POST['remove_item'], $_POST['product_id'])) {
         $productId = $_POST['product_id'];
         if (isset($_SESSION['cart'])) {
+            /* Filtert das gelöschte Produkt heraus und aktualisiert den Warenkorb */
             $_SESSION['cart'] = array_values(array_filter($_SESSION['cart'], function ($item) use ($productId) {
                 return $item['id'] !== $productId;
             }));
@@ -21,18 +26,24 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
     }
 
+    /* Aktion: Die Bestellung abschicken ("Jetzt kaufen") */
     if (isset($_POST['checkout'])) {
+        /* Leerzeichen am Anfang und Ende der Eingaben entfernen */
         $name = trim($_POST['customer_name'] ?? '');
         $email = trim($_POST['customer_email'] ?? '');
         $address = trim($_POST['customer_address'] ?? '');
 
+        /* Prüfen, ob alle Felder ausgefüllt sind */
         if ($name === '' || $email === '' || $address === '') {
             $message = 'Bitte fülle alle Kontaktdaten aus, um die Bestellung abzuschließen.';
+        /* Prüfen, ob überhaupt etwas im Warenkorb liegt */
         } elseif (empty($cart)) {
             $message = 'Der Warenkorb ist leer. Bitte lege zuerst Artikel in den Warenkorb.';
+        /* Wenn alles stimmt: Bestellung erfolgreich verarbeiten */
         } else {
             $_SESSION['cart_customer'] = ['name' => $name, 'email' => $email, 'address' => $address];
             $customer = $_SESSION['cart_customer'];
+            /* Alles wird gelerht und die Bestellung als abgeschlossen markiert */
             $_SESSION['cart'] = [];
             $cart = [];
             $orderComplete = true;
@@ -41,6 +52,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 }
 
+/* Berechnet den Gesamtwert aller Artikel im Warenkorb */
 $total = 0;
 foreach ($cart as $item) {
     $total += $item['price'] * $item['quantity'];

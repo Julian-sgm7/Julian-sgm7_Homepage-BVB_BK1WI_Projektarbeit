@@ -4,6 +4,7 @@ $titel = "BVB Shop";
 include 'head.php';
 include 'header.php';
 
+/* Liste aller Produkte, die man kaufen kann */
 $products = [
     'heimtrikot' => ['name' => 'BVB Heimtrikot', 'price' => 89.99, 'image' => '../img/BVB_Heimtrikot.png'],
     'auswartstrikot' => ['name' => 'BVB Auswärtstrikot', 'price' => 89.99, 'image' => '../img/BVB_Auswartstrikot.png'],
@@ -25,10 +26,14 @@ if (isset($_GET['action'], $_GET['product']) && $_GET['action'] === 'buy' && iss
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['add_to_cart'])) {
     $productId = $_POST['product_id'] ?? '';
+    /* min + max Menge */
     $quantity = max(1, min(10, (int)($_POST['quantity'] ?? 1)));
 
+    /* Fehler melden, wenn das Produkt nicht existiert */
     if (!isset($products[$productId])) {
         $message = 'Ungültiges Produkt. Bitte wählen Sie ein Produkt aus.';
+
+    /* Paket für den Warenkorb packen */
     } else {
         $item = [
             'id' => $productId,
@@ -38,10 +43,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['add_to_cart'])) {
             'image' => $products[$productId]['image'],
         ];
 
+        /* Das Produkt wird in die Session ($_SESSION['cart']) gespeichert. */
         if (!isset($_SESSION['cart'])) {
             $_SESSION['cart'] = [];
         }
 
+        /* Prüft, ob das Produkt schon im Warenkorb ist. Wenn ja: Menge erhöhen */
         $found = false;
         foreach ($_SESSION['cart'] as &$cartItem) {
             if ($cartItem['id'] === $productId) {
@@ -57,6 +64,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['add_to_cart'])) {
         $message = 'Dein Artikel wurde erfolgreich in den Warenkorb gelegt. Du kannst weiter einkaufen oder im Warenkorb deine Daten eingeben.';
     }
 }
+
+/* Berechnet die Gesamtzahl der Artikel und den Gesamtpreis */
 $cart = $_SESSION['cart'] ?? [];
 $cartCount = 0;
 $totalAmount = 0;

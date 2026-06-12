@@ -1,17 +1,22 @@
 <?php
 
 class RechnerModel {
+    /* Festlegen der Ticket-Preise für die verschiedenen Blöcke */
     private $standard_preis = 50;
     private $familien_preis = 40;
     private $vip_preis = 250;
 
+    /* Funktion, die den Preis basierend auf dem gewählten Block berechnet */
     public function berechneGesamtpreis($anzahl, $block) {
         $preis = $this->standard_preis;
+        /* Prüfen, ob es sich um den Familien-Block handelt */
         if (strpos($block, 'Familien') !== false) {
             $preis = $this->familien_preis;
+        /* Prüfen, ob es sich um den VIP-Block handelt */
         } elseif (strpos($block, 'VIP') !== false) {
             $preis = $this->vip_preis;
         }
+        /* Endpreis ausrechnen: Menge mal Ticketpreis */
         return $anzahl * $preis;
     }
     

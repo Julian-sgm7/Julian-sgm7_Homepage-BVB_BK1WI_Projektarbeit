@@ -1,7 +1,8 @@
 /* Zeichensatz auf UTF-8 festlegen */
 @charset "UTF-8";
 
-/* Grundstyling f�r den gesamten Body */
+
+/* Grundstyling für den gesamten Body */
 body {
 	font-family: Arial, sans-serif;	/* Schriftart festlegen */				
 	background-color: #000000;		/* Hintergrundfarbe Schwarz */				
@@ -32,6 +33,48 @@ main {
 /* Hauptbereich Sektionen */
 main section {
 	text-align: center;				/* Text innerhalb der Sektion zentrieren */				
+}
+
+.homepage {
+	padding-top: 8px;
+}
+
+.hero {
+	gap: 20px;
+	padding: 18px 0 12px;
+}
+
+.hero-copy {
+	padding: 24px;
+}
+
+.hero-copy h2 {
+	font-size: clamp(1.8rem, 2.7vw, 2.4rem);
+}
+
+.hero-copy p {
+	line-height: 1.6;
+}
+
+.home-cards-simple {
+	gap: 16px;
+	margin-top: 16px;
+}
+
+.home-cards-simple .home-card {
+	padding: 18px;
+}
+
+.home-cards-simple .home-card h3 {
+	margin-bottom: 10px;
+}
+
+.home-games {
+	gap: 10px;
+}
+
+.home-games a {
+	flex: 1 1 140px;
 }
 
 .info {
@@ -819,6 +862,7 @@ footer a {
     overflow: hidden;				/* Wichtig f�r Bild-Zoom Effekt */
 }
 
+
 .bild-container img {
     width: 100%;					/* Volle Breite des Containers */
     height: auto;					/* Automatische H�he */
@@ -836,9 +880,9 @@ footer a {
 }
 
 .text-inhalt h3 {
-    margin: 0 0 10px 0;				/* Abst�nde definieren */
+    margin: 0 0 10px 0;				/* Abst�nde definieren */ 
     color: yellow;					/* �berschrift Gelb */
-    font-size: 24px;				/* Schriftgr��e */
+    font-size: 24px;				/* Schriftgröße */
 }
 
 .text-inhalt p {
@@ -887,6 +931,50 @@ footer a {
 }
 
 /* Service Seite */
+.service-simple {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 16px;
+}
+
+.service-box {
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: 24px;
+    align-items: center;
+    background: #111111;
+    border: 4px solid #ffdd57;
+    border-radius: 24px;
+    padding: 24px;
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.35);
+}
+
+.service-copy h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #ffdd57;
+    font-size: 1.8rem;
+}
+
+.service-copy p {
+    color: #eeeeee;
+    line-height: 1.6;
+    margin-bottom: 18px;
+}
+
+.service-image-box {
+    background: rgba(255, 255, 255, 0.04);
+    border: 2px solid rgba(255, 221, 87, 0.2);
+    border-radius: 18px;
+    overflow: hidden;
+}
+
+.service-image-box img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
 .service-form {
     display: flex;					/* Vertikale Ausrichtung der Felder */
     flex-direction: column;			/* Elemente untereinander anordnen */
@@ -1377,4 +1465,294 @@ hr {
 
 @media screen and (max-width: 480px) {
     .gallery-grid img { height: 110px; }
+}
+
+
+/* ============================================
+   MODERN SEARCH BAR STYLES - BVB DESIGN
+   ============================================ */
+
+/* Search Container */
+.search-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-left: auto;
+    margin-right: 15px;
+    flex: 0 1 450px;
+}
+
+.search-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+/* Search Input */
+.search-input {
+    width: 100%;
+    padding: 12px 20px 12px 45px;
+    border: 3px solid #000;
+    border-radius: 30px;
+    background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%);
+    color: #000;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    height: 44px;
+    box-sizing: border-box;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+.search-input::placeholder {
+    color: #333;
+    font-weight: 500;
+    opacity: 0.8;
+}
+
+.search-input:focus {
+    outline: none;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4), 
+                0 0 0 4px rgba(255, 215, 0, 0.3),
+                inset 0 1px 0 rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+}
+
+/* Search Icon */
+.search-icon {
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 18px;
+    pointer-events: none;
+    opacity: 0.95;
+    transition: all 0.3s ease;
+    z-index: 10;
+}
+
+.search-input:focus ~ .search-icon {
+    opacity: 1;
+    transform: translateY(-50%) scale(1.1);
+}
+
+/* Clear Button */
+.search-clear {
+    position: absolute;
+    right: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: #333;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 2px 6px;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    display: none;
+}
+
+.search-clear:hover {
+    color: #000;
+    transform: translateY(-50%) rotate(90deg) scale(1.2);
+}
+
+.search-input.has-value ~ .search-clear {
+    display: block;
+}
+
+/* Search Results Dropdown */
+.search-results {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: linear-gradient(180deg, #000 0%, #0a0a0a 100%);
+    border: 3px solid #ffd700;
+    border-radius: 16px;
+    margin-top: 12px;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 1000;
+    box-shadow: 0 12px 40px rgba(255, 215, 0, 0.25),
+                0 8px 32px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+}
+
+.search-results.show {
+    max-height: 500px;
+    opacity: 1;
+    overflow-y: auto;
+}
+
+/* Search Result Item */
+.search-result-item {
+    padding: 14px 18px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    border-bottom: 1px solid rgba(255, 215, 0, 0.1);
+    text-decoration: none;
+    color: #fff;
+    position: relative;
+}
+
+.search-result-item::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: linear-gradient(180deg, #ffd700 0%, rgba(255, 215, 0, 0) 100%);
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.search-result-item:last-child {
+    border-bottom: none;
+}
+
+.search-result-item:hover {
+    background: linear-gradient(90deg, rgba(255, 215, 0, 0.15) 0%, transparent 100%);
+    padding-left: 22px;
+}
+
+.search-result-item:hover::before {
+    opacity: 1;
+}
+
+.search-result-item.external::after {
+    content: '↗';
+    margin-left: auto;
+    font-size: 12px;
+    opacity: 0.6;
+    transition: all 0.2s ease;
+}
+
+.search-result-item:hover.external::after {
+    opacity: 1;
+    transform: translateX(2px) translateY(-2px);
+}
+
+/* Result Icon */
+.result-icon {
+    font-size: 20px;
+    min-width: 28px;
+    text-align: center;
+    transition: all 0.2s ease;
+}
+
+.search-result-item:hover .result-icon {
+    transform: scale(1.15);
+}
+
+/* Result Info */
+.result-info {
+    flex: 1;
+    text-align: left;
+}
+
+.result-name {
+    font-weight: 700;
+    font-size: 14px;
+    color: #ffd700;
+    margin-bottom: 3px;
+    letter-spacing: 0.3px;
+}
+
+.result-type {
+    font-size: 11px;
+    color: rgba(255, 255, 255, 0.55);
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    font-weight: 600;
+}
+
+/* No Results Message */
+.search-no-results {
+    padding: 24px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* Loading State */
+.search-loading {
+    padding: 16px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.search-loading::after {
+    content: '';
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #ffd700;
+    animation: pulse 1.5s ease-in-out infinite;
+    margin-left: 6px;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 0.3;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .search-container {
+        flex: 0 1 350px;
+    }
+}
+
+@media (max-width: 768px) {
+    .search-container {
+        flex: 0 1 250px;
+        margin-right: 10px;
+    }
+    
+    .search-input {
+        font-size: 13px;
+        padding: 10px 16px 10px 40px;
+        height: 40px;
+    }
+    
+    .search-results {
+        max-height: 350px;
+    }
+}
+
+/* Scrollbar Styling */
+.search-results::-webkit-scrollbar {
+    width: 8px;
+}
+
+.search-results::-webkit-scrollbar-track {
+    background: rgba(255, 215, 0, 0.05);
+    border-radius: 3px;
+}
+
+.search-results::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #ffd700 0%, #ffed4e 100%);
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+.search-results::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #ffed4e 0%, #ffd700 100%);
+    box-shadow: 0 0 8px rgba(255, 215, 0, 0.4);
 }
