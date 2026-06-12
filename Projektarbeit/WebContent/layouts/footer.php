@@ -6,5 +6,6 @@
 </footer>
 
 <script src="../js/search.js"></script>
+<script src="../js/ai-chat.js"></script>
 </body>
 </html>

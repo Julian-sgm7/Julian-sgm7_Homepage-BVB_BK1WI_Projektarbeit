@@ -5,4 +5,5 @@
     <meta name="author" content="Julian Angele">
     <title><?php echo isset($titel) ? $titel : "BVB Homepage"; ?></title>
     <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/ai-chat.css">
 </head>

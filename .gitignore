@@ -1,0 +1,28 @@
+# Environment Variables
+.env
+.env.local
+.env.*.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Build
+build/
+dist/
+*.log
+
+# Dependencies
+node_modules/
+vendor/
+
+# Cache
+.cache/
+*.tmp

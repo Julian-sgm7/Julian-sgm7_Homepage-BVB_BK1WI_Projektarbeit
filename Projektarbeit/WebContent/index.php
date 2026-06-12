@@ -5,6 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>BVB-Homepage</title>
 	<link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" href="css/ai-chat.css">
 </head>
 
 <body>
@@ -93,5 +94,6 @@
 	</footer>
 
 	<script src="js/search.js"></script>
+	<script src="js/ai-chat.js"></script>
 </body>
 </html>
